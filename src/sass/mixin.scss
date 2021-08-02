@@ -1,0 +1,43 @@
+@mixin nav-item() {
+  color: #333333;
+  display: inline-block;
+  font-size: 0.18rem;
+  height: 0.48rem;
+  line-height: 0.48rem;
+  width: 0.48rem;
+  &:active {
+    opacity: 0.5;
+  }
+  [class^="icon-"],
+  [class*=" icon-"] {
+    line-height: 0.48rem;
+    vertical-align: middle;
+  }
+}
+
+@mixin title-page() {
+  bottom: auto;
+  font-family: "Microsoft Yahei";
+  font-size: 0.12rem;
+  font-style: normal;
+  height: auto;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  top: 50%;
+  transform: translate3d(0px, -40%, 0px);
+  white-space: nowrap;
+  width: auto;
+  .subtext-page {
+    color: #aaaaaa;
+    display: block;
+    font-size: 0.1rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 1;
+    text-transform: none;
+  }
+}

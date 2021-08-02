@@ -1,0 +1,18 @@
+.weui-cells {
+  font-size: 0.14rem;
+  margin-top: 0.1rem;
+  color: #333 !important;
+  .weui-cell {
+    padding: 0.15rem;
+  }
+}
+.weui-cells_form {
+  .weui-cell__ft {
+    font-size: inherit;
+  }
+  .weui-cell_switch {
+    .weui-cell__ft {
+      font-size: 0;
+    }
+  }
+}

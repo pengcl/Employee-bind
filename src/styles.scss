@@ -1,0 +1,1083 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body {
+  width: 100%;
+}
+
+html {
+  font-size: 12px
+}
+
+div, form, img, ul, ol, li, dl, dt, dd, p, button, fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none
+}
+
+body {
+  font-family: "Microsoft Yahei", "微软雅黑";
+  margin: 0;
+  padding: 0;
+  color: #333;
+  font-size: 12px;
+  background: #fff;
+  margin: 0;
+  font-size: 1rem;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  border: 0;
+  font-size: 0;
+  overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+.search-record div::after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+a {
+  color: #333;
+  display: block;
+  text-decoration: none
+}
+
+a:visited {
+  color: #333
+}
+
+.header {
+  height: 4.17rem;
+  background: #1A6F97;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.header .logo {
+  width: 11.92rem;
+  position: absolute;
+  top: 0.83rem;
+  left: 1.25rem;
+  font-size: 0;
+}
+
+.header .logo img {
+  width: 100%;
+}
+
+.header .title {
+  text-align: center;
+  font-size: 1.4rem;
+  color: #fff;
+  line-height: 4.17rem;
+}
+
+.header .nav {
+  width: 3.33rem;
+  height: 2.2rem;
+  padding-top: 0.25rem;
+  border: 1px solid #67BCE4;
+  border-radius: 0.25rem;
+  position: absolute;
+  right: 1.25rem;
+  top: 0.83rem;
+  text-align: center;
+}
+
+.header .nav b {
+  width: 1.83rem;
+  height: 0.17rem;
+  margin-top: 0.33rem;
+  margin-left: 0.75rem;
+  background: #67BCE4;
+  display: block
+}
+
+.header .btn-back {
+  position: absolute;
+  left: 1.25rem;
+  top: 1.45rem;
+  padding-left: 1rem;
+  font-size: 1rem;
+  font-weight: normal;
+  color: #fff;
+}
+
+.header .btn-back:after {
+  content: "";
+  width: 0.8rem;
+  height: 0.8rem;
+  border-top: 1px solid #fff;
+  border-left: 1px solid #fff;
+  transform: rotate(-45deg);
+  position: absolute;
+  left: 0;
+  top: 0.25rem;
+}
+
+.container {
+  margin: 4.17rem 0 0 0;
+  position: relative
+}
+
+.panelbox {
+  padding: 0 1.25rem;
+}
+
+.pop-cover {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  top: 0;
+  bottom: 0;
+  position: fixed;
+  z-index: 15;
+}
+
+.nav-list {
+  width: 66%;
+  background: #1A6F97;
+  position: fixed;
+  z-index: 20;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  color: #fff;
+}
+
+.nav-list ul {
+  margin-top: 4.17rem;
+}
+
+.nav-list ul li {
+  padding: 0 1.25rem;
+  line-height: 3.3rem;
+  position: relative;
+}
+
+.nav-list ul li.active {
+
+}
+
+.nav-list ul li i {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-top: 1px solid #fff;
+  border-right: 1px solid #fff;
+  transform: rotate(130deg);
+  display: block;
+  position: absolute;
+  right: 1.5rem;
+  top: 1.15rem;
+}
+
+.nav-list ul li.active i {
+  transform: rotate(-45deg);
+  top: 1.5rem;
+}
+
+.nav-list ul li ul {
+  margin-top: 0;
+  display: none
+}
+
+.nav-list ul li ul li {
+  color: #9AD2ED;
+  margin-left: -1.25rem;
+  margin-right: -1.25rem;
+  padding-left: 2.25rem;
+  border-bottom: 1px dashed #488CAC;
+  position: relative;
+}
+
+.nav-list ul li ul li:before {
+  content: "";
+  width: 0.4rem;
+  height: 0.4rem;
+  background: #67BCE4;
+  transform: rotate(45deg);
+  position: absolute;
+  left: 1.25rem;
+  top: 1.4rem;
+}
+
+.nav-list ul li.active ul li {
+  background: #1A6F97
+}
+
+.nav-list .btn-close {
+  padding: 0.7rem 0;
+  width: 4.17rem;
+  height: 1.25rem;
+  font-size: 2rem;
+  font-weight: normal;
+  line-height: 1.25rem !important;
+  position: absolute;
+  right: 0;
+}
+
+
+.menu-slide {
+  width: 100%;
+  height: 4.17rem;
+  border-bottom: 1px solid #ddd;
+  overflow-x: auto;
+  position: absolute;
+  top: 0;
+}
+
+.menu-slide ul li {
+  padding: 0 1.25rem;
+  line-height: 4.17rem;
+  color: #666;
+  display: inline-block;
+  position: relative;
+}
+
+.menu-slide ul li.active {
+  color: #2497CE;
+}
+
+.menu-slide ul li.active:after {
+  content: "";
+  width: 2rem;
+  height: 0.17rem;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  margin-left: -1.5rem;
+  background: #2497CE;
+}
+
+.list-block-news {
+  padding: 4.17rem 1.25rem 0 1.25rem;
+  .title{
+    font-size: 1.2rem;
+    color: #000;
+    line-height: 4rem;
+    font-weight: bold;
+  }
+}
+
+.list-block-news ul li {
+  padding: 1.5rem 0;
+  border-bottom: 1px dashed #eee;
+  font-size: 0;
+  display: flex
+}
+
+.list-block-news ul li:last-child {
+  border-bottom: none
+}
+
+.list-block-news ul li img {
+  width: 7.5rem;
+  height: 7.5rem;
+  border-radius: 0.25rem;
+  display: inline-block;
+}
+
+.list-block-news ul li .text {
+  width: 68%;
+  margin-left: 1rem;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.list-block-news ul li h3 {
+  font-size: 1.17rem;
+  color: #000;
+  line-height: 1.6rem;
+  max-height: 3.2rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.list-block-news ul li p {
+  font-size: 1rem;
+  color: #999;
+  line-height: 1.4rem;
+  margin-top: 0.3rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.list-block-news.reord, .list-block-news.application {
+  padding: 0 1.25rem;
+}
+
+.list-block-news.reord ul li {
+  display: block
+}
+
+.list-block-news.reord ul li img {
+  height: auto;
+}
+
+.list-block-news.reord ul li p:first-child {
+  margin-top: 0;
+}
+
+.list-block-news.reord ul li span {
+  width: 70%;
+  color: #000;
+  display: inline-block;
+  vertical-align: top;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.list-block-news.reord ul li .btnbox {
+  margin-top: 0.5rem;
+  display: flex
+}
+
+.list-block-news ul li .btn {
+  width: 31%;
+  margin-right: 3%;
+  font-size: 0.9rem;
+  line-height: 2rem;
+  text-align: center;
+  color: #fff;
+  border-radius: 0.2rem;
+}
+
+.list-block-news ul li .btn:last-child {
+  margin-right: 0;
+}
+
+.list-block-news ul li .btn.bg-gray {
+  background: #999;
+}
+
+.list-block-news ul li .btn.bg-blue {
+  background: #2497CE;
+}
+
+.list-block-news ul li .btn.bg-orange {
+  background: #f60;
+}
+
+.list-block-news ul li .btn.bg-black {
+  background: #333
+}
+
+.list-block-news ul li .btn.bg-green {
+  background: #67ad37;
+}
+
+.list-block-news.application ul li {
+  position: relative
+}
+
+.list-block-news.application ul li .text {
+  width: 100%;
+  margin-left: 10px;
+  display: block;
+  vertical-align: top;
+}
+
+.list-block-news.application ul li p {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+}
+
+.list-block-news.application ul li p:first-child {
+  margin-top: 0;
+}
+
+.list-block-news.application ul li span {
+  width: 60%;
+  color: #000;
+  display: inline-block;
+  vertical-align: top;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.list-block-news.application ul li .btn {
+  width: 6.5rem;
+  line-height: 2.5rem;
+  border-radius: 0.2rem;
+  text-align: center;
+  font-size: 1rem;
+  color: #fff;
+  position: absolute;
+  right: 0;
+  bottom: 1.5rem;
+}
+
+.btn-application {
+  margin: 0 auto;
+  margin-top: 5.5rem;
+  margin-bottom: 1rem;
+  width: 40%;
+  line-height: 3.5rem;
+  background: #67AD37;
+  border-radius: 0.2rem;
+  text-align: center;
+}
+
+.btn-application i {
+  margin-right: 5px;
+  width: 2rem;
+  height: 2rem;
+  background: url("/assets/images/icon_application.png") no-repeat;
+  background-size: 100%;
+  display: inline-block;
+  vertical-align: middle
+}
+
+.btn-application span {
+  font-size: 1.2rem;
+  color: #fff;
+  display: inline-block;
+  vertical-align: middle
+}
+
+h1 {
+  padding: 1.5rem 0;
+  text-align: center;
+  line-height: 2rem;
+  font-size: 1.5rem;
+  color: #000;
+}
+
+h1.borderbot {
+  border-bottom: 1px solid #eee;
+}
+
+.news-inf {
+  padding: 0 0 1rem 0;
+  font-size: 0.9rem;
+  color: #999;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.text-details {
+  padding: 1rem 0;
+  line-height: 2rem;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.text-details p {
+  padding: 0.5rem 0;
+}
+
+.text-details img {
+  margin: 0 auto;
+  max-width: 100%;
+  display: inherit;
+}
+
+
+.info-simple {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  line-height: 1.8rem;
+  background: #F7F7F7;
+  border-radius: 0.25rem;
+  font-size: 0;
+  position: relative
+}
+
+.info-simple ul li {
+  width: 100%;
+  display: inline-block;
+  font-size: 1rem;
+}
+
+.info-simple.half ul li {
+  width: 50%;
+}
+
+.info-simple .btn {
+  width: 6.5rem;
+  line-height: 2.5rem;
+  color: #fff;
+  font-size: 1.2rem;
+  background: #67AD37;
+  border-radius: 0.25rem;
+  text-align: center;
+  position: absolute;
+  right: 1rem;
+  top: 1.8rem;
+  display: block;
+}
+
+.formbox {
+  padding: 1rem;
+
+  em {
+    font-style: normal;
+    color: #fd5451;
+  }
+}
+
+.formbox .title {
+  font-size: 1.2rem;
+  color: #000;
+  line-height: 4rem;
+  font-weight: bold;
+}
+
+.formbox ul li {
+  margin: 1rem 0;
+  font-size: 0;
+  display: flex
+}
+
+.formbox ul li.border {
+  border-top: 1px solid #E7E7E7;
+  border-bottom: 1px solid #E7E7E7;
+}
+
+.formbox ul li label {
+  width: 33%;
+  line-height: 2.5rem;
+  font-size: 1.1rem;
+  color: #666;
+  text-align: right
+}
+
+.formbox ul li .control {
+  width: 67%;
+  line-height: 2.5rem;
+  font-size: 1.1rem;
+}
+
+.formbox ul li .control input, .formbox ul li .control select, .formbox ul li .control textarea {
+  width: 100%;
+  padding: 0 0.5rem;
+  line-height: 2.5rem;
+  font-size: 1rem;
+  color: #333;
+  border: 1px solid #E7E7E7;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  background: none;
+}
+
+.formbox ul li .control textarea {
+  height: 5rem;
+}
+
+.formbox ul li .control select {
+  height: 2.5rem
+}
+
+.formbox ul li .control select.width30 {
+  width: 30%;
+}
+
+.formbox ul li .control input.width90 {
+  width: 90%;
+}
+
+.formbox ul li .control .checkbox {
+  width: 96%;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.formbox ul li .control .checkbox input[type="checkbox"] {
+  border: 1px solid #E7E7E7;
+  width: 1rem;
+  height: 1rem;
+  display: inline-block;
+  vertical-align: middle
+}
+
+.formbox ul li .btn {
+  width: 50%;
+  line-height: 3rem;
+  color: #fff;
+  font-size: 1.2rem;
+  background: #67AD37;
+  border-radius: 0.25rem;
+  text-align: center;
+  display: block;
+  &.bg-gray{
+    background: #999;
+  }
+}
+
+.formbox ul li .btn.bg-orange {
+  background: #f60;
+}
+
+.formbox ul li .price {
+  width: 100%;
+  padding: 0.8rem 0;
+  font-size: 1rem;
+  text-align: right;
+}
+
+.formbox ul li .price p {
+  line-height: 1.8rem;
+}
+
+.formbox ul li .price strong {
+  color: #f00
+}
+
+.formbox ul li .control .text {
+  color: #000;
+  display: inline-block;
+}
+
+.formbox ul li .control a.btn-edit {
+  margin-left: 1rem;
+  color: #4C9DE4;
+  padding-right: 1.5rem;
+  background: url("/assets/images/icon_edit.png") center right no-repeat;
+  background-size: 15px;
+  display: inline-block;
+}
+
+.formbox ul li .control .time-choice {
+  display: none;
+
+  &.show {
+    display: block;
+  }
+}
+
+.formbox ul li .control .time-choice .date {
+  display: block;
+}
+
+.formbox ul li .control .time-choice .time {
+  border: 1px solid #E7E7E7;
+  margin: 0.5rem 0;
+  border-radius: 0.25rem;
+}
+
+.formbox ul li .control .time-choice .time label {
+  width: 100%;
+  display: block;
+  padding: 0 0.5rem;
+  line-height: 2rem;
+  text-align: left;
+  box-sizing: border-box
+}
+
+.formbox ul li .control .time-choice .time input {
+  width: 1rem;
+  display: inline-block;
+  vertical-align: middle
+}
+
+.formbox ul li .control .time-choice .time span {
+  display: inline-block;
+  vertical-align: middle
+}
+
+.formbox.lowheight .title {
+  line-height: 2rem;
+}
+
+.formbox.lowheight ul li {
+  margin: 0.8rem 0;
+}
+
+.formbox.lowheight ul li label, .formbox.lowheight ul li .control {
+  line-height: 1.5rem
+}
+
+.searchbox {
+  padding: 1rem 1.25rem;
+  font-size: 0;
+}
+
+.searchbox select {
+  width: 60%;
+  height: 2.5rem;
+  padding: 0 0.5rem;
+  line-height: 2.5rem;
+  font-size: 1rem;
+  color: #333;
+  border: 1px solid #E7E7E7;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  background: none;
+  display: inline-block
+}
+
+.searchbox .btn {
+  margin-left: 5%;
+  width: 35%;
+  line-height: 2.5rem;
+  font-size: 1rem;
+  color: #fff;
+  background: #67AD37;
+  border-radius: 0.25rem;
+  text-align: center;
+  display: inline-block
+}
+
+.search-record {
+  padding: 1rem 1.25rem;
+  font-size: 0;
+  background: #F6F6F6
+}
+
+.search-record div {
+  margin: 0.5rem 0;
+}
+
+.search-record input, .search-record select {
+  width: 48%;
+  padding: 0 0.5rem;
+  line-height: 2.5rem;
+  font-size: 1rem;
+  color: #333;
+  border: 1px solid #E7E7E7;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+.search-record select {
+  margin-left: 4%;
+  height: calc(2.5rem + 2px);
+}
+
+.search-record .btn {
+  float: right;
+  width: 5rem;
+  line-height: 2.5rem;
+  color: #fff;
+  font-size: 1rem;
+  background: #67AD37;
+  border-radius: 0.25rem;
+  text-align: center;
+}
+
+.list-block {
+  padding: 0 1.25rem 1rem 1.25rem;
+  font-size: 0;
+}
+
+.list-block ul li {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid #eee;
+  font-size: 0;
+  position: relative
+}
+
+.list-block ul li:last-child {
+  border-bottom: none
+}
+
+.list-block ul li img {
+  width: 7.5rem;
+  border-radius: 0.25rem;
+  display: inline-block;
+}
+
+.list-block ul li .text {
+  width: 68%;
+  margin-left: 1rem;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.list-block ul li h3 {
+  font-size: 1.17rem;
+  color: #000;
+  line-height: 1.6rem;
+  max-height: 3.2rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.list-block ul li p {
+  font-size: 1rem;
+  color: #999;
+  line-height: 1.4rem;
+  margin-top: 0.3rem;
+  max-height: 4.2rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.list-block ul li .btn {
+  width: 5rem;
+  line-height: 1.8rem;
+  color: #fff;
+  font-size: 1rem;
+  background: #67AD37;
+  border-radius: 0.25rem;
+  text-align: center;
+  position: absolute;
+  right: 1.25rem;
+  top: 1.3rem;
+  display: block;
+}
+
+.tips-search {
+  padding: 1.25rem;
+  color: #666;
+  border: 1px solid #E7E7E7;
+}
+
+.data-state {
+  padding: 4rem 0 0 0;
+  text-align: center
+}
+
+.data-state .icon {
+  margin: 0 auto;
+  width: 10rem;
+  font-size: 0
+}
+
+.data-state .icon img {
+  width: 100%;
+}
+
+.data-state p {
+  line-height: 4rem;
+  color: #ccc
+}
+
+.pop-box {
+  width: 86%;
+  padding: 0.8rem;
+  background: #fff;
+  border-radius: 0.25rem;
+  position: fixed;
+  left: 7%;
+  z-index: 15;
+  box-sizing: border-box;
+  display: none;
+
+  em {
+    font-style: normal;
+    color: #fd5451;
+  }
+}
+
+.pop-box .title {
+  line-height: 2.5rem;
+  text-align: center;
+  color: #333;
+  font-weight: bold;
+  font-size: 1rem;
+  background: #F7F7F7
+}
+
+.pop-box .title i {
+  width: 1.2rem;
+  height: 1.2rem;
+  background: url("/assets/images/icon_warn.png") no-repeat;
+  background-size: 100%;
+  display: inline-block;
+  vertical-align: middle
+}
+
+.pop-box .form {
+  padding: .5rem 0;
+}
+
+.pop-box .form ul li {
+  margin: 1rem 0 0 0;
+  font-size: 0;
+  display: flex
+}
+
+.pop-box .form ul li label {
+  width: 30%;
+  line-height: 2.5rem;
+  font-size: 1rem;
+  color: #666;
+  text-align: right
+}
+
+.pop-box .form ul li .control {
+  width: 65%;
+  line-height: 2.5rem;
+  font-size: 1rem;
+
+  select, input {
+    &.warn {
+      border: 1px solid #fd5451;
+      color: #fd5451;
+    }
+  }
+}
+
+.pop-box .form ul li .control input, select {
+  width: 100%;
+  padding: 0 0.5rem;
+  line-height: 2.5rem;
+  font-size: 1rem;
+  color: #333;
+  border: 1px solid #E7E7E7;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  background: none;
+  display: inline-block;
+}
+
+.pop-box .form ul li .control select {
+  height: 2.5rem;
+}
+
+.pop-box .form ul li .control input.width60 {
+  width: 60%;
+}
+
+.pop-box .form ul li .control .btn-yzm {
+  margin-left: 0.5rem;
+  line-height: 2.5rem;
+  font-size: 1rem;
+  color: #06C;
+  display: inline-block;
+}
+
+.pop-box .form ul li .control .btn {
+  width: 55%;
+  line-height: 3rem;
+  color: #fff;
+  font-size: 1.2rem;
+  background: #67AD37;
+  border-radius: 0.25rem;
+  text-align: center;
+  display: inline-block;
+}
+
+.pop-box .form ul li .control a.btn-text {
+  width: 35%;
+  line-height: 3rem;
+  color: #666;
+  font-size: 1.2rem;
+  text-align: center;
+  text-decoration: underline;
+  display: inline-block;
+}
+
+.pop-box .form ul li .control a.btn-forget {
+  line-height: 2rem;
+  font-size: 1rem;
+  color: #666;
+  padding-left: 1.5rem;
+  background: url("/assets/images/icon_ask.png") center left no-repeat;
+  background-size: 1.2rem;
+}
+
+.end-pay{padding:2rem;border-bottom:1px solid #F1F1F1; text-align:center}
+.end-pay i{margin:0 auto;margin-bottom:1rem;width:4rem;height:4rem; display:block}
+.end-pay p{font-size:1rem;color:#666;padding:0.2rem 0;}
+.end-pay strong{font-size:2rem;color:#2497CE; display:inline-block; vertical-align:middle}
+
+.icon-success-green{ background:url("/assets/images/icon_success_green.png") no-repeat; background-size:100%;}
+
+.info-pay{padding:2rem 1rem 0 1rem; text-align:center;}
+.info-pay .btn{margin:0 1rem;border:1px solid #D8D8D8;padding:1rem 1.5rem;border-radius:0.25rem; display:inline-block}
+.info-pay .btn i{width:2rem;height:2rem;margin-right:0.5rem;display:inline-block; vertical-align:middle}
+.info-pay .btn span{font-size:1.4rem;display:inline-block; vertical-align:middle}
+.info-pay .btn.wechat i{background:url("/assets/images/icon_wechat.png") center center no-repeat; background-size:100%;}
+.info-pay .btn.wechat span{color:#44A838;}
+.info-pay .btn.bank i{background:url("/assets/images/icon_pay.png") center center no-repeat; background-size:100%;}
+.info-pay .btn.bank span{color:#FF9900;}
+.info-pay .btn.active{border:1px solid #2497CE;}
+
+.info-pay .picbox,.info-pay .pic-upload{padding:1.5rem 0 0 0;font-size:0}
+.info-pay .picbox img,.info-pay .pic-upload img{width:60%;}
+.info-pay .pic-upload input{padding:1rem 0;}
+
+.uploader {
+  &::ng-deep {
+    .mat-form-field-underline {
+      display: none;
+    }
+  }
+
+  .weui-uploader__input-box {
+    margin: 10px 10px 0 0;
+    border-radius: 5px;
+    border: 1px dashed currentColor;
+
+    &:before, &:after {
+      display: none;
+    }
+
+    .weui-uploader__input-box-text {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate3d(-50%, -50%, 0);
+
+
+      h3 {
+        font-size: 14px;
+        text-align: center;
+        margin: 5px 0 10px;
+      }
+
+      p {
+        text-align: center;
+        margin: 10px 0 0;
+        color: #999;
+      }
+    }
+    &.uploaded {
+      border: 1px dashed #fff;
+      color: #fff;
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .weui-uploader__bd {
+    margin-bottom: 0;
+    margin-right: 0;
+  }
+
+  .weui-uploader__file {
+    width: 100%;
+    height: 100px;
+  }
+
+  .weui-uploader__input-box {
+    width: 100%;
+    height: 100px;
+  }
+}
+@media (min-width: 375px) {
+  .list-block-news ul li .text {
+    width: 70%;
+  }
+}
+
+
+

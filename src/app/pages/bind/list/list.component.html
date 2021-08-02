@@ -1,0 +1,49 @@
+<div class="bind-header">
+  <h1>员工绑定</h1>
+</div>
+<div class="pop-box" style="display: block">
+  <div class="form">
+    <form [formGroup]="form">
+      <ul>
+        <!--<li>
+          <label>openid：</label>
+          <div class="control"><input formControlName="openId" type="text"></div>
+        </li>-->
+        <li class="required" [class.error]="(form.get('name').hasError('required') || form.get('name').hasError('maxlength')) && form.get('name').dirty">
+          <label>姓名：</label>
+          <div class="control"><input formControlName="name" type="text"></div>
+          <div *ngIf="form.get('name').dirty" class="error-msg">
+            <span *ngIf="form.get('name').hasError('required')">请输入姓名</span>
+            <span *ngIf="form.get('name').hasError('maxlength')">姓名不能超过12个字符</span>
+          </div>
+        </li>
+        <li class="required" [class.error]="(form.get('jobNumber').hasError('required') || form.get('jobNumber').hasError('maxlength')) && form.get('jobNumber').dirty">
+          <label>工号：</label>
+          <div class="control"><input formControlName="jobNumber" type="text"></div>
+          <div *ngIf="form.get('jobNumber').dirty" class="error-msg">
+            <span *ngIf="form.get('jobNumber').hasError('required')">请输入工号</span>
+            <span *ngIf="form.get('jobNumber').hasError('maxlength')">工号不能超过20个字符</span>
+          </div>
+        </li>
+        <li class="required" [class.error]="(form.get('mobile').hasError('required') || form.get('mobile').hasError('pattern')) && form.get('mobile').dirty">
+          <label>手机号码：</label>
+          <div class="control"><input formControlName="mobile" type="num"></div>
+          <div *ngIf="form.get('mobile').dirty" class="error-msg">
+            <span *ngIf="form.get('mobile').hasError('required')">请输入手机号码</span>
+            <span *ngIf="form.get('mobile').hasError('pattern')">请输入正确的手机号码</span>
+          </div>
+        </li>
+        <li style="margin-top: 50px;">
+          <label>&nbsp;</label>
+          <div class="control">
+            <button [disabled]="form.invalid" class="btn" (click)="bind()">绑定</button>
+          </div>
+        </li>
+      </ul>
+    </form>
+  </div>
+</div>
+
+
+
+

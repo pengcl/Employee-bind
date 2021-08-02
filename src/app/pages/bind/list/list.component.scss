@@ -1,0 +1,35 @@
+.bind-header{
+  background: #2a6db1;
+
+  h1{
+    text-align: center;
+    font-weight: normal;
+    color: #fff;
+  }
+}
+
+li.required {
+  margin-bottom: 20px !important;
+  position: relative;
+  label {
+    &:before {
+      content: '*';
+    }
+  }
+  &.error {
+    label {
+      color: #ff0000;
+    }
+  }
+  .error-msg {
+    position: absolute;
+    left: 30%;
+    bottom: -15px;
+    font-size: 10px;
+    color: #ff0000;
+  }
+}
+
+button[disabled]{
+  opacity: 0.5;
+}
