@@ -1,3 +1,6 @@
-<h1>{{detail?.title}}</h1>
-<p class="date"><span>{{detail?.createTime | repairDate | date : 'yyyy-MM-dd'}}</span></p>
-<div [innerHTML]="detail?.content"></div>
+
+<ng-container *ngIf="detail">
+  <h1>{{detail?.title}}</h1>
+  <p class="date"><span>{{detail?.createTime | repairDate | date : 'yyyy-MM-dd'}}</span></p>
+  <div class="content" [innerHTML]="detail?.content"></div>
+</ng-container>

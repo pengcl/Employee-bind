@@ -26,12 +26,12 @@ export class CoreModule {
   }
 
   static forRoot(): ModuleWithProviders {
-    return <ModuleWithProviders>{
+    return {
       ngModule: CoreModule,
       providers: [
         ...CORE_PROVIDERS,
         /*{provide: RouteReuseStrategy, useClass: RouteStrategy}*/
       ],
-    };
+    } as ModuleWithProviders;
   }
 }

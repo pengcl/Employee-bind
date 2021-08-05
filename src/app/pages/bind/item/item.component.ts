@@ -1,23 +1,29 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, NgZone} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
+import {ToastService} from 'ngx-weui';
 import {BindService} from '../bind.service';
 
-/*content: "<p class="ql-align-center"><strong class="ql-size-"
-createTime: "2021-07-14 02:12:48"
-id: 91
-title: "通知测试"*/
 @Component({
   selector: 'app-bind-item',
   templateUrl: './item.component.html',
   styleUrls: ['./item.component.scss']
 })
-export class BindItemComponent {
+export class BindItemComponent implements OnInit {
   detail;
+  code;
 
-  constructor(private route: ActivatedRoute, private bindSvc: BindService) {
-    bindSvc.notice(this.route.snapshot.params.id).subscribe(res => {
-      this.detail = res.data;
-      console.log(this.detail);
+  constructor(private zone: NgZone, private route: ActivatedRoute, private toastSvc: ToastService,
+              private bindSvc: BindService) {
+  }
+
+  ngOnInit() {
+    this.zone.run(() => {
+      this.toastSvc.loading('加载中...', 0);
+      this.bindSvc.notice(this.route.snapshot.params.id).subscribe(res => {
+        this.toastSvc.hide();
+        this.code = res.code;
+        this.detail = res.data;
+      });
     });
   }
 

@@ -34,12 +34,14 @@ h1 {
 }
 
 ::ng-deep {
-  * {
-    white-space: break-spaces;
-  }
+  .content {
+    * {
+      white-space: break-spaces;
+    }
 
-  p {
-    white-space: break-spaces;
+    p {
+      white-space: break-spaces;
+    }
   }
 
   img {

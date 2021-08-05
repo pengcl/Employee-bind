@@ -4,10 +4,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AppRoutingModule} from './app-routing.module';
 
 import {ThemeModule} from './@theme/theme.module';
-
 import {INTERCEPTORS} from './@core/interceptors';
-
-
 import {AppComponent} from './app.component';
 
 import {environment} from '../environments/environment';
