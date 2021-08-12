@@ -20,8 +20,10 @@ export class BindItemComponent implements OnInit {
     this.zone.run(() => {
       this.toastSvc.loading('加载中...', 0);
       this.bindSvc.notice(this.route.snapshot.params.id).subscribe(res => {
+        console.log(res);
         this.toastSvc.hide();
         this.code = res.code;
+        res.data.content = res.data.content.replace(/<img src=\"/gi, '<img src="http://tp.ai-fox.cn');
         this.detail = res.data;
       });
     });
