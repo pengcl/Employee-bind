@@ -37,7 +37,7 @@ export class BindListComponent implements OnInit {
       });
     }
     this.form = new FormGroup({
-      name: new FormControl('', [Validators.required, Validators.maxLength(12)]),
+      name: new FormControl('', [Validators.required, Validators.maxLength(20)]),
       jobNumber: new FormControl('', [Validators.required, Validators.maxLength(20)]),
       mobile: new FormControl('', [Validators.required, Validators.pattern(/^1[3456789]\d{9}$/)]),
       openId: new FormControl(this.openid, [Validators.required])
