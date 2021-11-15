@@ -23,7 +23,7 @@ export class BindItemComponent implements OnInit {
         console.log(res);
         this.toastSvc.hide();
         this.code = res.code;
-        res.data.content = res.data.content.replace(/<img src=\"/gi, '<img src="http://tp.ai-fox.cn');
+        res.data.content = res.data.content.replace(/<img src=\"/gi, '<img class="viewer" src="http://tp.ai-fox.cn');
         this.detail = res.data;
       });
     });

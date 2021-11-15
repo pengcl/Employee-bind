@@ -8,8 +8,20 @@
         content="width=device-width, initial-scale = 1.0, maximum-scale = 1.0, user-scalable = 0, viewport-fit = cover">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="/assets/js/viewer/viewer.min.css">
 </head>
 <body>
-  <app-root></app-root>
+<app-root></app-root>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="/assets/js/viewer/viewer.min.js"></script>
+<script src="/assets/js/viewer/jquery-viewer.min.js"></script>
+<script>
+  $(document).on('click', '.viewer', function () {
+    $(this).viewer({
+      navbar: 0,
+      title: false
+    });
+  });
+</script>
 </body>
 </html>
