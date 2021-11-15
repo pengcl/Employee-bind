@@ -14,7 +14,7 @@
           <div class="control"><input formControlName="name" type="text"></div>
           <div *ngIf="form.get('name').dirty" class="error-msg">
             <span *ngIf="form.get('name').hasError('required')">请输入姓名</span>
-            <span *ngIf="form.get('name').hasError('maxlength')">姓名不能超过12个字符</span>
+            <span *ngIf="form.get('name').hasError('maxlength')">姓名不能超过20个字符</span>
           </div>
         </li>
         <li class="required" [class.error]="(form.get('jobNumber').hasError('required') || form.get('jobNumber').hasError('maxlength')) && form.get('jobNumber').dirty">
